@@ -36,6 +36,7 @@ gatsby build
 * `package.json`: required, but `gatsby` the dependency transitively pulls in `react` and `react-dom`.
 * `pages/`: each file in here will be served as a distinct URL. E.g., `pages/admin.js` would be served as `/admin/`
 * `README.md`: not required!
+* `site.css`: not required, but the `gatsby build` will choke when inlining css without _some_ css having been used.
 
 
 ## License
