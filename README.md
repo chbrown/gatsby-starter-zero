@@ -33,8 +33,8 @@ gatsby build
 * `config.toml`: bafflingly, this file's presence is required, but it doesn't have to contain anything.
 * `html.js`: should be called `Layout.jsx` or something but yeah, it's required, and has to have this filename.
 * `package.json`: required, but `gatsby` the dependency transitively pulls in `react` and `react-dom`.
+* `pages/`: each file in here will be served as a distinct URL. E.g., `pages/admin.js` would be served as `/admin/`
 * `README.md`: not required!
-* `pages/`: each file in here will be served as a distinct URL. E.g., `pages/admin.js` would go under `/admin/`
 
 
 ## License
