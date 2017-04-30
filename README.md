@@ -39,6 +39,17 @@ gatsby build
 * `site.css`: not required, but the `gatsby build` will choke when inlining css without _some_ css having been used.
 
 
+## Building gh-pages
+
+    rev=$(git rev-parse --short master)
+    repo=${TMPDIR-/tmp/}gatsby-starter-zero-gh-pages
+    git clone git@github.com:chbrown/gatsby-starter-zero.git -b gh-pages $repo
+    gatsby build && cp -R public/ $repo
+    cd $repo && git add . && git commit -m "Sync with master @ $rev" && git push
+
+Check result at <https://chbrown.github.io/gatsby-starter-zero/>
+
+
 ## License
 
 Copyright © 2017 Christopher Brown. [MIT Licensed](https://chbrown.github.io/licenses/MIT/#2017).
